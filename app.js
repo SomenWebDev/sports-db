@@ -1,4 +1,5 @@
 const allPlayers = () => {
+  document.getElementById("player-container").innerHTML = "";
   const searchValue = document.getElementById("search-box").value;
   const url = `https://www.thesportsdb.com/api/v1/json/2/searchplayers.php?p=${searchValue}`;
   fetch(url)
@@ -25,6 +26,7 @@ const showPlayerDetail = (players) => {
                       </div>`;
 
     playerContainer.appendChild(div);
+    // playerContainer.innerHTML = "";
     console.log(player);
   }
 };
